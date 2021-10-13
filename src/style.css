@@ -8,3 +8,8 @@ h1 {
 * {
   border: 1px red solid;
 }
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
