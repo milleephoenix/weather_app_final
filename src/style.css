@@ -1,4 +1,7 @@
 h1 {
-  color: blue;
   font-family: "Rubik", sans-serif;
+}
+.btn-primary {
+  display: block;
+  max-width: 100px;
 }
