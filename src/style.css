@@ -1,15 +1,31 @@
+h1,
+ul,
+.fa-cloud,
+.container {
+  color: white;
+}
+
+body {
+  background-image: url(images/photo-1530908295418-a12e326966ba.jfif);
+}
+
 h1 {
   font-family: "Rubik", sans-serif;
-}
-.btn-primary {
-  display: block;
-  max-width: 100px;
 }
 * {
   border: 1px red solid;
 }
-
 ul {
   list-style-type: none;
   padding-left: 0px;
+}
+
+.container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgb(30, 68, 100);
+}
+
+.fa-cloud {
+  font-size: 50px;
 }
