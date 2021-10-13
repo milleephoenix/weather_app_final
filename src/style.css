@@ -6,15 +6,15 @@ ul,
 }
 
 body {
-  background-image: url("src/images/360_F_434977932_CGPIeV2e2KNr0giHDCSHw4hb9niyfmfh.jpg");
+  background-image: url("images/360_F_434977932_CGPIeV2e2KNr0giHDCSHw4hb9niyfmfh.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 h1 {
   font-family: "Rubik", sans-serif;
 }
-* {
-  border: 1px red solid;
-}
+
 ul {
   list-style-type: none;
   padding-left: 0px;
@@ -24,8 +24,14 @@ ul {
   margin-top: 50px;
   margin-bottom: 50px;
   background-color: rgb(30, 68, 100);
+  max-width: 350px;
+  border-radius: 20px;
 }
 
 .fa-cloud {
   font-size: 50px;
+}
+
+#icon {
+  text-align: center;
 }
