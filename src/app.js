@@ -4,6 +4,22 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Saguenay&appid=$
 //console.log(apiUrl);
 
 function displayTemperature(response) {
-  console.log(response.data.main.temp);
+  let temperatureElement = document.querySelector("#temp");
+  let cityElement = document.querySelector("#city");
+  let conditionElement = document.querySelector("#condition");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#windSpeed");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  cityElement.innerHTML = response.data.name;
+  conditionElement.innerHTML = capitalizeFirstLetter(
+    response.data.weather[0].description
+  );
+  humidityElement.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
 }
+
+function capitalizeFirstLetter(data) {
+  return data.charAt(0).toUpperCase() + data.slice(1);
+}
+
 axios.get(apiUrl).then(displayTemperature);
