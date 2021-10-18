@@ -1,7 +1,3 @@
-let apiKey = "339446a70a6285d4da506a17e7465ddf";
-let city = "Saguenay";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
 //console.log(apiUrl);
 
 function formatDate(timestamp) {
@@ -50,8 +46,21 @@ function displayTemperature(response) {
   iconElement.setAttribute(`alt`, response.data.weather[0].description);
 }
 
+function search(city) {
+  let apiKey = "339446a70a6285d4da506a17e7465ddf";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function submit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
 function capitalizeFirstLetter(data) {
   return data.charAt(0).toUpperCase() + data.slice(1);
 }
 
-axios.get(apiUrl).then(displayTemperature);
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", submit);
