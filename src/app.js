@@ -34,6 +34,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#windSpeed");
   let dateTime = document.querySelector("#dateTime");
+  let iconElement = document.querySelector("#weatherIcon");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   conditionElement.innerHTML = capitalizeFirstLetter(
@@ -42,6 +43,11 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
   dateTime.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    `src`,
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute(`alt`, response.data.weather[0].description);
 }
 
 function capitalizeFirstLetter(data) {
