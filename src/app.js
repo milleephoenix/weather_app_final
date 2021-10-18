@@ -31,7 +31,10 @@ function displayTemperature(response) {
   let windSpeed = document.querySelector("#windSpeed");
   let dateTime = document.querySelector("#dateTime");
   let iconElement = document.querySelector("#weatherIcon");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+
+  celciusTemp = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celciusTemp);
   cityElement.innerHTML = response.data.name;
   conditionElement.innerHTML = capitalizeFirstLetter(
     response.data.weather[0].description
@@ -61,6 +64,27 @@ function submit(event) {
 function capitalizeFirstLetter(data) {
   return data.charAt(0).toUpperCase() + data.slice(1);
 }
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  let farTemp = (celciusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(farTemp);
+}
+
+function displayCelciusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(celciusTemp);
+}
+
+let celciusTemp = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celciusLink = document.querySelector("#celcius");
+celciusLink.addEventListener("click", displayCelciusTemp);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submit);
