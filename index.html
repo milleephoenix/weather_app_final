@@ -26,12 +26,12 @@
       <input type="submit" value="Search" id="button"/>
     </form>
     <body>
-      <h1 id="city">City</h1>
+      <h1 id="city">Weather</h1>
       <div class="row">
         <div class="col-6">
           <ul>
             <li id="dateTime"></li>
-            <li id="condition">Cloudy</li>
+            <li id="condition"></li>
           </ul>
         </div>
         <div class="col-6" id="icon">
@@ -41,16 +41,18 @@
 
       <div class="row">
         <div class="col-6">
-          <h2><strong id="temp">11</strong><span id="units"><a href="#" id="celcius">°C</a> | <a href="#" id="fahrenheit">°F</a></span></h2>
+          <h2><strong id="temp"></strong><span id="units"><a href="#" id="celcius">°C</a> | <a href="#" id="fahrenheit">°F</a></span></h2>
         </div>
-        <div class="col-6">
+        <div class="col-6" id="lower-row">
           <ul>
             <li>Humidity : <span id="humidity"></span> %</li>
             <li>Wind: <span id="windSpeed"></span> km/h</li>
           </ul>
         </div>
       </div>
-    </body>
+      <small id="signature"><a href="https://github.com/milleephoenix/weather_app_final" target="_blank">GitHub Repository</a></small>
+    </body> 
   </div>
+  
   <script src="src/app.js"></script>
 </html>

@@ -25,6 +25,10 @@ img {
   height: 80%;
 }
 
+#signature {
+  margin: 0 auto;
+}
+
 .container {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -34,7 +38,7 @@ img {
 }
 
 .row {
-  height: 75px;
+  height: 70px;
 }
 
 .form-control {
