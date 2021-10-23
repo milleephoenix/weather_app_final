@@ -11,7 +11,7 @@ body {
   background-position: center;
 }
 
-h1 {
+* {
   font-family: "Rubik", sans-serif;
 }
 
@@ -26,19 +26,21 @@ img {
 }
 
 #signature {
-  margin: 0 auto;
+  margin: 100px auto;
+  display: block;
 }
 
 .container {
   margin-top: 50px;
   margin-bottom: 50px;
+  height: 350px;
   background-color: rgb(30, 68, 100);
   max-width: 350px;
   border-radius: 20px;
 }
 
 .row {
-  height: 70px;
+  height: 65px;
 }
 
 .form-control {
@@ -58,6 +60,27 @@ img {
   background-color: rgb(170, 98, 166);
   cursor: pointer;
   transition: ease-in-out 200ms;
+}
+
+.weather-forecast {
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 15px;
+  color: rgb(170, 98, 166);
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.forecast-icon {
+  max-height: 35px;
 }
 
 a {
