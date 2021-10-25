@@ -34,9 +34,9 @@ img {
   margin-top: 50px;
   margin-bottom: 50px;
   height: 350px;
-  background-color: rgb(30, 68, 100);
+  background-color: rgb(60, 110, 151);
   max-width: 450px;
-  border-radius: 20px;
+  border-radius: 18px;
 }
 
 .row {
@@ -44,7 +44,7 @@ img {
 }
 
 .form-control {
-  background-color: rgb(30, 68, 100);
+  background-color: rgb(60, 110, 151);
   border: none;
   padding-left: 0px;
   padding-top: 15px;
@@ -57,7 +57,7 @@ img {
 }
 
 #button:hover {
-  background-color: rgb(170, 98, 166);
+  background-color: rgb(224, 153, 197);
   cursor: pointer;
   transition: ease-in-out 200ms;
 }
@@ -68,7 +68,7 @@ img {
 
 .weather-forecast-date {
   font-size: 15px;
-  color: rgb(170, 98, 166);
+  color: rgb(224, 153, 197);
 }
 
 .weather-forecast-temperatures {
@@ -84,6 +84,6 @@ img {
 }
 
 a {
-  color: rgb(170, 98, 166);
+  color: rgb(224, 153, 197);
   text-decoration: none;
 }
